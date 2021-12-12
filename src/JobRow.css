@@ -1,0 +1,36 @@
+.jobs-div {
+  padding: 20px;
+  background-color: white;
+  display: flex;
+}
+
+.jobs-div:hover {
+  background-color: #f9f6ee;
+}
+
+.jobs-inner-div {
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 85%;
+}
+
+a,
+p,
+label {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tags-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.tags-div > a {
+  width: fit-content;
+  margin-right: 10px;
+}
+
+.tags-div > a:hover {
+  color: cadetblue;
+}
