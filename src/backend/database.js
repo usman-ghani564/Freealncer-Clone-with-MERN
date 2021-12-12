@@ -63,7 +63,6 @@ const connectToMongoDb = () => {
     (err) => {
       if (!err) {
         console.log("Connection to the database is successful");
-        fetchJobs();
       } else {
         console.log("An error occured while connecting to the database");
       }
@@ -86,16 +85,16 @@ const insertJobs = (job_obj) => {
   });
 };
 
-connectToMongoDb();
-
 const fetchJobs = () => {
   jobModel
     .find()
     .then((data) => {
-      console.log(data);
+      return data;
     })
     .catch((err) => {
       console.log("An error occured while fetching data from database!");
     });
-  console.log(data);
 };
+
+module.exports.connectToMongoDb = connectToMongoDb;
+module.exports.fetchJobs = fetchJobs;
